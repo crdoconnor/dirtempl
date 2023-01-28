@@ -1,0 +1,6 @@
+dirtempl.egg-info/
+docs/public/
+.vscode/
+venv/
+
+*.pyc
