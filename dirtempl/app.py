@@ -25,10 +25,10 @@ def snippet_replace(filetext, snippet_dir):
     "snippets",
     help="Specify snippets folder",
 )
-def main():
-    src = Path("src")
-    dest = Path("dest")
-    snippets = Path("snippets")
+def main(src, dest, snippets):
+    src = Path(src)
+    dest = Path(dest)
+    snippets = Path(snippets)
 
     if dest.exists():
         dest.rmtree()
