@@ -38,7 +38,7 @@ setup(
     url="http://hitchdev.com/dirtempl/",
     license="MIT",
     install_requires=[
-        "click>=8.1.3",
+        "click>=7.1.2",
     ],
     packages=find_packages(
         exclude=[
