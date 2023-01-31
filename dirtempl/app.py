@@ -2,7 +2,9 @@ from os import walk, makedirs
 from pathlib import Path
 from copy import copy
 import click
+import sys
 import re
+
 
 SNIPPET_REGEX = re.compile(r"\{\{\{\{(.*?)\}\}\}\}")
 
@@ -31,7 +33,8 @@ def main(src, dest, snippets):
     snippets = Path(snippets)
 
     if dest.exists():
-        dest.rmtree()
+        click.echo(f"{dest} must be deleted before running dirtempl.", err=True)
+        sys.exit(1)
     dest.mkdir()
 
     filecount = 0
